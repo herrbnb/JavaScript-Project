@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="2">
+
+  <main class="calculator">
+    <header class="calculator__header">
+      <h1 class="logo">calc</h1>
+
+      <div class="theme-switch">
+        <span class="theme-switch__labels" aria-hidden="true">
+          <span>1</span><span>2</span><span>3</span>
+        </span>
+        <div class="theme-switch__track" role="radiogroup" aria-label="Choose theme">
+          <button type="button" class="theme-switch__dot" data-theme-btn="1" role="radio" aria-checked="false" aria-label="Theme 1"></button>
+          <button type="button" class="theme-switch__dot" data-theme-btn="2" role="radio" aria-checked="true" aria-label="Theme 2"></button>
+          <button type="button" class="theme-switch__dot" data-theme-btn="3" role="radio" aria-checked="false" aria-label="Theme 3"></button>
+        </div>
+      </div>
+    </header>
+
+    <section class="screen" aria-live="polite">
+      <span class="screen__value" id="display">0</span>
+    </section>
+
+    <section class="keypad" aria-label="Calculator keys">
+      <button class="key key--digit" data-key="7">7</button>
+      <button class="key key--digit" data-key="8">8</button>
+      <button class="key key--digit" data-key="9">9</button>
+      <button class="key key--op key--del" data-action="delete">DEL</button>
+
+      <button class="key key--digit" data-key="4">4</button>
+      <button class="key key--digit" data-key="5">5</button>
+      <button class="key key--digit" data-key="6">6</button>
+      <button class="key key--op" data-key="+">+</button>
+
+      <button class="key key--digit" data-key="1">1</button>
+      <button class="key key--digit" data-key="2">2</button>
+      <button class="key key--digit" data-key="3">3</button>
+      <button class="key key--op" data-key="-">&minus;</button>
+
+      <button class="key key--digit" data-key=".">.</button>
+      <button class="key key--digit" data-key="0">0</button>
+      <button class="key key--op" data-key="/">/</button>
+      <button class="key key--op" data-key="*">&times;</button>
+
+      <button class="key key--reset" data-action="reset">RESET</button>
+      <button class="key key--equals" data-action="equals">=</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
